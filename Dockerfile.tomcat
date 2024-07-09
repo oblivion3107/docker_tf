@@ -11,4 +11,4 @@ ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 EXPOSE 8080
 
 # Copy the WAR file to the webapps directory in Tomcat
-COPY /home/ec2-user/project/target/StudentDetails.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/StudentDetails.war /usr/local/tomcat/webapps/ROOT.war
