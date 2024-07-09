@@ -1,0 +1,14 @@
+# Use the official MySQL base image
+FROM mysql:8.0
+
+# Set environment variables for MySQL
+ENV MYSQL_ROOT_PASSWORD=Jhonathan@1 \
+    MYSQL_DATABASE=Logindetails \
+    MYSQL_USER=phill \
+    MYSQL_PASSWORD=Jhonathan@1
+
+# Copy the SQL dump file into the Docker image for database initialization
+COPY /home/ec2-user/project/data.sql /docker-entrypoint-initdb.d/
+
+# Expose port 3306 for MySQL
+EXPOSE 3306
