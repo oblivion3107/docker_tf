@@ -13,7 +13,7 @@ COPY data.sql /docker-entrypoint-initdb.d/
 # Grant privileges to the MySQL user 'phill' from any host
 RUN echo " \
     CREATE DATABASE IF NOT EXISTS ${MYSQL_DATABASE}; \
-    GRANT ALL PRIVILEGES ON ${MYSQL_DATABASE}.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}'; \
+    GRANT ALL PRIVILEGES ON ${MYSQL_DATABASE}.* TO '${MYSQL_USER}'@'%'; \
     FLUSH PRIVILEGES; \
     " > /docker-entrypoint-initdb.d/grant-permissions.sql
 
