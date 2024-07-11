@@ -10,5 +10,5 @@ ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # Expose port 8080
 EXPOSE 8080
 
-# Copy the WAR file to the webapps directory in Tomcat
+# Copy the WAR file into the webapps directory of Tomcat
 COPY target/StudentDetails.war /usr/local/tomcat/webapps/ROOT.war
